@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+#game-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('floor.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+#player {
+  width: 160px;
+  position: absolute;
+  bottom: 190px;
+  left: 100px;
+  transition: 0.1s;
+}
+
+#obstacle {
+  width: 50px;
+  position: absolute;
+  bottom: 210px;
+  left: 100vw;
+}
+
+#game-over-box {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.game-over-content {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.game-over-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.game-over-content button {
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color:#2028b5;
+  color: white;
+  transition: 0.3s;
+}
+
+.game-over-content button:hover {
+  background-color:#cd208ead;
+}

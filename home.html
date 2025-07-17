@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FOXY GAME</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+  <audio id="bg-music" src="music.mp3" autoplay loop></audio>
+  <video src="backgound.mp4" autoplay loop muted></video>
+  <h1>FOXY GAME</h1>
+  <button onclick="window.location.href='choose.html'">Pick your fox</button>
+
+
+  <script >
+       const bgMusic = document.getElementById("bg-music");
+   window.addEventListener("click", () => {
+    bgMusic.play();
+}, { once: true });
+  </script> 
+</body>
+</html>

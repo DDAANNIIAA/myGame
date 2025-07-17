@@ -1,0 +1,68 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: white;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Background video covers full screen */
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+/* Title styling */
+h1 {
+  margin-top: 250px;
+  font-size: 4rem;
+  font-family: 'Fredoka One', cursive;
+  text-shadow: 2px 2px 6px black;
+}
+
+/* Buttons */
+button {
+  margin: 20px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #2028b5;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+button:hover {
+  background-color: #cd208ead;
+  transform: scale(1.05);
+}
+
+/* Responsive fallback */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    margin-top: 40px;
+  }
+
+  button {
+    width: 80%;
+    font-size: 1rem;
+  }
+}

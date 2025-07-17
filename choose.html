@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Don't Fall</title>
+  <link rel="stylesheet" href="styleChar.css" />
+</head>
+<body>
+  <audio id="bg-music" src="music.mp3" autoplay loop></audio>
+  <h2>PICK YOUR FOX  !</h2>
+  <div class="character-container">
+   <img id="gray" src="gray-removebg-preview.png" alt="Gray Character" onclick="selectCharacter('gray')" />
+  <img id="orange" src="orange-removebg-preview.png" alt="Orange Character" onclick="selectCharacter('orange')" />
+
+  </div>
+
+  <div class="start-button-container">
+    <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <script>
+    let selectedCharacter = null;
+
+    function selectCharacter(id) {
+      selectedCharacter = id;
+      console.log("Selected character:", id);
+
+      document.querySelectorAll('.character-container img').forEach(img => {
+        img.classList.remove('selected');
+      });
+      document.getElementById(id).classList.add('selected');
+    }
+      function startGame() {
+  if (!selectedCharacter) {
+    alert("Please choose a character first!");
+    return;
+  }
+   window.location.href = 'play.html?character=' + selectedCharacter;
+      }
+  </script>
+</body>
+</html>
