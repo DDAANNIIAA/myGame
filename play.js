@@ -83,7 +83,7 @@ window.onload = () => {
     }
 
     if (checkCollision()) {
-      console.log("COLLISION DETECTED 🚨");
+      console.log("COLLISION DETECTED");
       gameOver = true;
       showGameOver();
       return;
